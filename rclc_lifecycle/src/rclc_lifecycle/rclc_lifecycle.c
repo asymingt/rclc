@@ -53,6 +53,9 @@ rclc_make_node_a_lifecycle_node(
   lifecycle_node->node = node;
   lifecycle_node->publish_transitions = enable_communication_interface;
 
+  // // THis is needed
+  // memset(&lifecycle_node->callbacks, 0, sizeof(rclc_lifecycle_callback_map_t));
+
   rcl_lifecycle_state_machine_options_t state_machine_options =
     rcl_lifecycle_get_default_state_machine_options();
   state_machine_options.enable_com_interface = enable_communication_interface;
