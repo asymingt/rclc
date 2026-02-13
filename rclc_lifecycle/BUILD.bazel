@@ -35,10 +35,8 @@ cc_library(
     srcs = ["src/rclc_lifecycle/rclc_lifecycle.c"],
     hdrs = glob(["include/**/*.h"]),
     includes = ["include"],
-    local_defines = [
-        "ROS_PACKAGE_NAME=\\\"rclc_lifecycle\\\"",
-        "RCLC_LIFECYCLE_MAX_STRING_LENGTH=20",
-    ],
+    local_defines = ["ROS_PACKAGE_NAME=\\\"rclc_lifecycle\\\""],
+    defines = ["RCLC_LIFECYCLE_MAX_STRING_LENGTH=20"],
     deps = [
         ":msgs_c",
         "@rcl",
