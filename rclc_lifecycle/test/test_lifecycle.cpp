@@ -64,7 +64,7 @@ TEST(TestRclcLifecycle, lifecycle_node) {
   rcl_node_options_t node_ops = rcl_node_get_default_options();
   res += rcl_node_init(&my_node, "lifecycle_node", "rclc", &context, &node_ops);
 
-  rclc_lifecycle_node_t lifecycle_node;
+  rclc_lifecycle_node_t lifecycle_node = rclc_get_zero_initialized_lifecycle_node();
   rcl_lifecycle_state_machine_t state_machine = rcl_lifecycle_get_zero_initialized_state_machine();
 
   res += rclc_make_node_a_lifecycle_node(
@@ -101,7 +101,7 @@ TEST(TestRclcLifecycle, lifecycle_node_transitions) {
   rcl_node_options_t node_ops = rcl_node_get_default_options();
   res += rcl_node_init(&my_node, "lifecycle_node", "rclc", &context, &node_ops);
 
-  rclc_lifecycle_node_t lifecycle_node;
+  rclc_lifecycle_node_t lifecycle_node = rclc_get_zero_initialized_lifecycle_node();
   rcl_lifecycle_state_machine_t state_machine = rcl_lifecycle_get_zero_initialized_state_machine();
 
   res += rclc_make_node_a_lifecycle_node(
@@ -171,7 +171,7 @@ TEST(TestRclcLifecycle, lifecycle_node_callbacks) {
   rcl_node_options_t node_ops = rcl_node_get_default_options();
   res += rcl_node_init(&my_node, "lifecycle_node", "rclc", &context, &node_ops);
 
-  rclc_lifecycle_node_t lifecycle_node;
+  rclc_lifecycle_node_t lifecycle_node = rclc_get_zero_initialized_lifecycle_node();
   rcl_lifecycle_state_machine_t state_machine = rcl_lifecycle_get_zero_initialized_state_machine();
 
   res += rclc_make_node_a_lifecycle_node(
@@ -236,7 +236,7 @@ TEST(TestRclcLifecycle, lifecycle_node_servers) {
   rcl_node_options_t node_ops = rcl_node_get_default_options();
   res += rcl_node_init(&my_node, "lifecycle_node", "rclc", &context, &node_ops);
 
-  rclc_lifecycle_node_t lifecycle_node;
+  rclc_lifecycle_node_t lifecycle_node = rclc_get_zero_initialized_lifecycle_node();
   rcl_lifecycle_state_machine_t state_machine = rcl_lifecycle_get_zero_initialized_state_machine();
 
   res += rclc_make_node_a_lifecycle_node(
